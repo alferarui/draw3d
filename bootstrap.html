@@ -32,6 +32,7 @@
 
     </script>
     <script type="text/javascript">
+        bodyLoaded=false;
         function defaultScene() {
             return {
                 things: [
@@ -62,7 +63,7 @@
             };
         }
 
-        function initInterface(){
+        When(function(){return bodyLoaded}).Do(function initInterface(){
             var b=new Button('start render',function(event){exec(512,300)});
             b.bindToParent(document.body);
             var e=new Button('feedback',function(owner,data,event){console.log(owner,owner.getTitle(),event)});
@@ -75,12 +76,17 @@
             li1=new ListItem('set Show Date',ListItem.decorations.arrow);
             li1.setClickListener(function(owner,data,event){
                 //While(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
-                Do(function(owner,data,event){;li1.setText(Date().toString())});
+                //for(var i=0;i<10;i++){
+                    Do(function(owner,data,event){;li1.setText(Date().toString())});
+                //}
                 li1.setDetail("listener registered");
             })
             li2=new ListItem('start showing date',ListItem.decorations.next);
             li2.setClickListener(function(owner,data,event){
                 li1.setDetail("queue resumed");
+                //for(var i=0;i<5;i++){
+                    When(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
+                //}
                 Queue.Resume();
             })
             li3=new ListItem('pause queue',ListItem.decorations.none);
@@ -91,7 +97,7 @@
             li1.bindToParent(document.body);
             li2.bindToParent(document.body);
             li3.bindToParent(document.body);
-        }
+        });
         
         function exec(rezx,rezy) {
             var canv = document.createElement("canvas");
@@ -107,6 +113,6 @@
         }
     </script>
 </head>
-<body style="background:url(js/view/templates-images/backgroundStripes.png);" onload="initInterface()">
+<body style="background:url(js/view/templates-images/backgroundStripes.png);" onload="bodyLoaded=true">
 </body>
 </html>

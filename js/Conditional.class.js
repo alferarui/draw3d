@@ -15,6 +15,7 @@ var Conditional=(function(){
         };
         this.remove=false;
     }
+
     Conditional.EXECUTE_ONCE=-1;
     Conditional.EXECUTE_ALWAYS=-2;
     return Conditional;

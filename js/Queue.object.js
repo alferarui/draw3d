@@ -8,10 +8,11 @@
 // requires Conditional;
 var Queue=(function(){
     function Queue(){
+        var index=0;
         var logging=false;
         this.Logging=function(_logging){logging=_logging;return this;}
 
-        var speed=1000;
+        var speed=1;
         this.Speed=function(_speed){if(_speed==null){return speed;}else{speed=_speed;return this;}}
 
         var stopped=true;
@@ -29,6 +30,7 @@ var Queue=(function(){
         }
 
         var run=function(){
+            var _startTime=Date.now();
             if(logging)console.log("Queue is started @ "+speed)
             if(!paused){
                 if(logging)console.log("Queue is running @ "+speed)
@@ -43,9 +45,14 @@ var Queue=(function(){
                             }
                         }
                     }
+                    //var __speed=(Date.now()-_startTime);
+
+                    //index=(i<tasks.length)?(i+1):0;
                 }
             }
-
+            if(window.li3!=undefined){
+                window.li3.setDetail("watching "+(tasks.length)+" tasks");
+            }
             var _tasks=[];
             //tasks.length=0;
             for(var i=0;i<tasks.length;i++){
@@ -56,6 +63,15 @@ var Queue=(function(){
             }
             tasks=_tasks;
 
+            var __speed=(Date.now()-_startTime);
+
+            /*
+            if(window.li2!=undefined){
+                window.li2.setDetail("adjusting queue speed to "+(__speed+20)+"ms");
+            }
+            if(speed!=__speed){
+                speed=__speed;
+            }*/
             if(!stopped)setTimeout(run.bind(this),speed);
         }
         this.Tasks=function(_tasks){if(_tasks==null){return tasks;}else{tasks=_tasks;return this;}}
@@ -65,6 +81,7 @@ var Queue=(function(){
         return instance;
     }
     instance.Start();
+    instance.Resume();
     return instance;
 })();
 /**
@@ -84,6 +101,7 @@ Do.toString=function(){
             "*  @synthax : Do(function(){...});\n";
     return message;
 }
+
 /**
  *  * 'While' registers a function to be executed while
  *  the condition function evaluates to true
@@ -92,6 +110,7 @@ Do.toString=function(){
  * @return {Object}
  * @constructor
  */
+
 function While(condition){
     if(!(condition instanceof Function)){
         throw (new Error(While.toString()));
@@ -105,47 +124,13 @@ function While(condition){
     }
     return f;
 }
+
 While.toString=function(){
     var message="\n*  'While' registers a function to be executed while\n" +
             "*  the condition function evaluates to true\n" +
             "*  synthax : While(function(){...}).Do(function(){...});\n";
     return message;
 }
-
-/**
- * 'If' registers two functions (procedures) to be executed
- *  while the condition evaluates to true respectively
- *  while the condition evaluates to false
- * @synthax : If(function(){...}).Then(function(){...}).Else(function(){...});
- * @param condition
- * @return {Function}
- * @private
- */
-/*
-function If(condition){
-    if(!(condition instanceof Function)){
-        throw (new Error(If.toString()));
-    }
-    var f={}
-    f.Then=function(code_true){
-        var g={};
-        g.Else=function(code_false){
-            var conditional=new Conditional(condition,code_true,code_false,Conditional.EXECUTE_ONCE);
-            Queue.AddTask(conditional);
-        }
-        //return g;
-    }
-    return f;
-}
-If.toString=function(){
-    var message="\n * 'If' registers two functions (procedures) to be executed\n" +
-        " *  when the condition evaluates to true respectively\n" +
-        " *  when the condition evaluates to false\n" +
-        " *  synthax : If(function(){...}).Then(function(){...}).Else(function(){...});\n";
-    return message;
-}
-*/
-
 
 /**
  * @synthax : When(function(){...}).Do(function(){...});

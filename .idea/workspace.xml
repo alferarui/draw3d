@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="293fa727-5153-4fb4-b673-23031046a22b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    <list default="true" id="293fa727-5153-4fb4-b673-23031046a22b" name="Default" comment="draw3d project">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableNext.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableNextButton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableSelection.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/empty.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.html" afterPath="$PROJECT_DIR$/bootstrap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Conditional.class.js" afterPath="$PROJECT_DIR$/js/Conditional.class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Queue.object.js" afterPath="$PROJECT_DIR$/js/Queue.object.js" />
@@ -27,10 +31,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="bootstrap.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="bootstrap.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bootstrap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="80" selection-start="3465" selection-end="3465" vertical-scroll-proportion="-9.833333">
+            <state line="89" column="31" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.37880632">
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -41,16 +45,16 @@
       <file leaf-file-name="Queue.object.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Queue.object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="24" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.0">
+            <state line="55" column="26" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Conditional.class.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Conditional.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Conditional.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.10650887">
+            <state line="17" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,9 +131,9 @@
         <option value="$PROJECT_DIR$/js/view/View.class.js" />
         <option value="$PROJECT_DIR$/js/Environment.class.js" />
         <option value="$PROJECT_DIR$/js/view/ListItem.class.js" />
-        <option value="$PROJECT_DIR$/bootstrap.html" />
-        <option value="$PROJECT_DIR$/js/Queue.object.js" />
         <option value="$PROJECT_DIR$/js/Conditional.class.js" />
+        <option value="$PROJECT_DIR$/js/Queue.object.js" />
+        <option value="$PROJECT_DIR$/bootstrap.html" />
       </list>
     </option>
   </component>
@@ -315,7 +319,11 @@
       <created>1361094627611</created>
       <updated>1361094627611</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="draw3d project">
+      <created>1361101041138</created>
+      <updated>1361101041138</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -327,7 +335,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2659975" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2659975" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -487,26 +495,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.html">
+    <entry file="file://$PROJECT_DIR$/js/Conditional.class.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="80" selection-start="3465" selection-end="3465" vertical-scroll-proportion="-9.833333">
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state line="17" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/Queue.object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="24" selection-start="2490" selection-end="2490" vertical-scroll-proportion="0.0">
+        <state line="55" column="26" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/Conditional.class.js">
+    <entry file="file://$PROJECT_DIR$/bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="3" selection-start="155" selection-end="155" vertical-scroll-proportion="0.10650887">
-          <folding />
+        <state line="89" column="31" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.37880632">
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
