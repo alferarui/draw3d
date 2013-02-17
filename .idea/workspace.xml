@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="293fa727-5153-4fb4-b673-23031046a22b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/ListView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.html" afterPath="$PROJECT_DIR$/bootstrap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Queue.object.js" afterPath="$PROJECT_DIR$/js/Queue.object.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/Button.class.js" afterPath="$PROJECT_DIR$/js/view/Button.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/ListItem.class.js" afterPath="$PROJECT_DIR$/js/view/ListItem.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/View.class.js" afterPath="$PROJECT_DIR$/js/view/View.class.js" />
     </list>
     <ignored path="draw3d.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -344,7 +338,11 @@
       <created>1361104934852</created>
       <updated>1361104934852</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="draw3d project">
+      <created>1361116754165</created>
+      <updated>1361116754165</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
