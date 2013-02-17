@@ -16,7 +16,7 @@ var View = (function () {
         this.getElement=function(){
             return _element;
         }
-        this.getViewAtIndex=function(table,index){
+        this.getViewAtIndex=itemAtIndex||function(table,index){
             var cell=document.createElement('div');
             cell.innerHTML=table[index];
             cell.addEventListener('click',View.makeEventListener(_View,_data[index],View.standardEventListeners.log));
@@ -28,10 +28,10 @@ var View = (function () {
                 _element.appendChild(this.renderItemAtIndex(_data,i));
             }
         }
-    }
-    View.bindToParent=function(parent){
-        parent.appendChild(_element);
-        return this;
+        this.bindToParent=function(parent){
+            parent.appendChild(_element);
+            return this;
+        }
     }
     View.initFromPrototype=function(id){
         var proto=document.getElementById(id);

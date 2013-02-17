@@ -11,6 +11,7 @@ var Button = (function () {
         var _View=this;
         var _view=_super.getElement();
         var _title=title||"Button";
+        var _width=240;
         var _click_eventListener=action$owner_data_event$||function(owner,data,event){alert('button '+owner.getTitle()+' clicked')};
 
         __init=function(view,template,listeners){
@@ -47,6 +48,10 @@ var Button = (function () {
         }
         this.setElement=function(element){
             _super.setElement(element);
+        }
+        this.setWidth=function(_w){
+            _width=_w;
+            _view.children[1].style.width=(_w-10)+'px';
         }
         __init();
     }

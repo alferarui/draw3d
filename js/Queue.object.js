@@ -39,9 +39,9 @@ var Queue=(function(){
                     if(task instanceof Conditional){
                         if(task.$if()){
                             try{
-                            task.$then();
+                                task.$then();
                             }catch(e){
-                                throw(Error("error at "+i+";"+task))
+                                if(logging)console.log("error ",e," at ",i+";"+task.toString());
                             }
                         }
                     }
@@ -65,13 +65,13 @@ var Queue=(function(){
 
             var __speed=(Date.now()-_startTime);
 
-            /*
+
             if(window.li2!=undefined){
                 window.li2.setDetail("adjusting queue speed to "+(__speed+20)+"ms");
             }
             if(speed!=__speed){
                 speed=__speed;
-            }*/
+            }
             if(!stopped)setTimeout(run.bind(this),speed);
         }
         this.Tasks=function(_tasks){if(_tasks==null){return tasks;}else{tasks=_tasks;return this;}}

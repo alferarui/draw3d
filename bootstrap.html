@@ -3,14 +3,16 @@
 <head>
     <title>Draw 3d</title>
     <style>
-        .log{
-            background-color: #999999;
+        body{
+            margin:0;
+            padding:0;
         }
     </style>
     <script type="text/javascript" src="js/view/View.class.js"></script>
     <script type="text/javascript" src="js/view/VerticalLayout.class.js"></script>
     <script type="text/javascript" src="js/view/Button.class.js"></script>
     <script type="text/javascript" src="js/view/ListItem.class.js"></script>
+    <script type="text/javascript" src="js/view/ListView.js"></script>
 
     <script type="text/javascript" src="js/RayTrace/Vector.class.js"></script>
     <script type="text/javascript" src="js/RayTrace/Color.class.js"></script>
@@ -33,6 +35,7 @@
     </script>
     <script type="text/javascript">
         bodyLoaded=false;
+        bodyChanged=false;
         function defaultScene() {
             return {
                 things: [
@@ -63,16 +66,17 @@
             };
         }
 
-        When(function(){return bodyLoaded}).Do(function initInterface(){
-            var b=new Button('start render',function(event){exec(512,300)});
-            b.bindToParent(document.body);
-            var e=new Button('feedback',function(owner,data,event){console.log(owner,owner.getTitle(),event)});
+        function initInterface(){
+            var mc=document.getElementById('content');
+            b=new Button('start render',function(event){exec(240,160)});
+            //b.bindToParent(document.body);
+            e=new Button('feedback',function(owner,data,event){console.log(owner,owner.getTitle(),event)});
             dialog={
                 log:function(s){
                     e.setTitle(s);
                 }
             }
-            e.bindToParent(document.body);
+            //e.bindToParent(document.body);
             li1=new ListItem('set Show Date',ListItem.decorations.arrow);
             li1.setClickListener(function(owner,data,event){
                 //While(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
@@ -94,25 +98,56 @@
                 li1.setDetail("queue paused");
                 Queue.Pause();
             })
-            li1.bindToParent(document.body);
-            li2.bindToParent(document.body);
-            li3.bindToParent(document.body);
-        });
-        
+            //li1.bindToParent(document.body);
+            //li2.bindToParent(document.body);
+            //li3.bindToParent(document.body);
+
+            adapter={
+                data:[b,e,li1,li2,li3],
+                viewAtIndex:function(table,index){
+                    return table[index];
+                }
+            }
+            lv=new ListView(adapter);
+            lv.bindToParent(mc);
+
+            adapter2={
+                data:["apple","pear","banana","plum","orange"],
+                viewAtIndex:function(table,index){
+                    var l=new ListItem(table[index],ListItem.decorations.arrow,function Cell(owner,data,event){owner.setDetail('item clicked')},function Detail(owner,data,event){owner.setDetail('disclosure clicked')});
+                    l.setDetail("@"+index);
+                    return l;
+                }
+            }
+            lv2=new ListView(adapter2)
+            lv2.bindToParent(mc);
+            lv.setWidth(320);
+            lv2.setWidth(320);
+        }
+        When(function(){return bodyLoaded}).Do(initInterface);
+        While(function(){return bodyChanged}).Do(function(){
+            console.log('body changed:'+document.body.clientWidth);
+            lv.setWidth(document.body.clientWidth);
+            lv2.setWidth(document.body.clientWidth);
+            bodyChanged=false;
+        })
         function exec(rezx,rezy) {
             var canv = document.createElement("canvas");
             canv.id='render';
             canv.width = rezx;
             canv.height = rezy;
-            document.body.appendChild(canv);
+            document.getElementById('content').appendChild(canv);
             var ctx = canv.getContext("2d");
             var rayTracer = new RayTracer();
             dialog.total=rezx*rezy*5;
             console.log('begin');
-            rayTracer.render(defaultScene(), ctx, rezx, rezx,32,0,dialog);
+            rayTracer.render(defaultScene(), ctx, rezx, rezx,32,2,dialog);
         }
     </script>
 </head>
-<body style="background:url(js/view/templates-images/backgroundStripes.png);" onload="bodyLoaded=true">
+<body onresize="bodyChanged=true" style="background:url(js/view/templates-images/backgroundStripes.png);" onload="bodyChanged=true;bodyLoaded=true">
+<div id="content">
+
+</div>
 </body>
 </html>

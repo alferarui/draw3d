@@ -5,9 +5,10 @@
  * Time: 1:12 PM
  * To change this template use File | Settings | File Templates.
  */
+    //requires(View)
 var ListItem = (function () {
 
-    function ListItem(caption,decorationType,action$owner_data_event$,action2$owner_data_event$) {
+    function ListItem(caption,decorationType,actionElement$owner_data_event$,actionDetail2$owner_data_event$) {
         var _super=new View(caption,function(table,index){},"div")
         var _View=this;
         var _view=_super.getElement();
@@ -16,8 +17,8 @@ var ListItem = (function () {
         var _decoration=decorationType||ListItem.decorations.arrow;
         var _width=240;
         var _height=44;
-        var _click_eventListener=action$owner_data_event$||function(owner,data,event){alert('button '+owner.getText()+' clicked')};
-        var _clickDetail_eventListener=action2$owner_data_event$||function(owner,data,event){alert('detail of button '+owner.getText()+' clicked')};
+        var _click_eventListener=actionElement$owner_data_event$||function(owner,data,event){alert('button '+owner.getText()+' clicked')};
+        var _clickDetail_eventListener=actionDetail2$owner_data_event$||function(owner,data,event){alert('detail of button '+owner.getText()+' clicked')};
 
         __init=function(view,template,listeners){
             _view.innerHTML=ListItem.template.html;_view.className='listitem';_view.children[0].innerHTML=_text;_view.children[2].innerHTML=_detail;
@@ -27,7 +28,7 @@ var ListItem = (function () {
                 st.id="style_ListItem";st.innerHTML=ListItem.template.css;
                 document.head.appendChild(st);
             }
-           _View.setDecoration(_decoration);
+            adjustLayout();
            _View.setDetail(_detail);
 
             _view.addEventListener('click',View.makeEventListener(_View,_text,function(owner,data,event){
@@ -44,8 +45,7 @@ var ListItem = (function () {
             //_view.children[1].addEventListener('click',View.makeEventListener(_View,_text,_clickDetail_eventListener),false);
 
         }
-        this.setDecoration=function(decoration){
-            _decoration=decoration;
+        var adjustLayout=function(){
             var v0=_view.children[0];
             var v1=_view.children[1];
             var v2=_view.children[2];
@@ -58,13 +58,18 @@ var ListItem = (function () {
                 v2.style.width=/*v0.style.width=*/((_width-v1.offsetWidth-10)>>0)+'px';
             },1);
         }
+        this.setDecoration=function(decoration){
+            _decoration=decoration;
+            adjustLayout();
+
+        }
         this.setWidth=function(w){
             _width=w;
-            _View.setDecoration(_decoration);
+            adjustLayout();
         }
         this.setHeight=function(h){
             _height=h;
-            _View.setDecoration(_decoration);
+            adjustLayout();
         }
         this.setClickListener=function(f$owner_data_event$){
             _click_eventListener=f$owner_data_event$;
@@ -99,6 +104,10 @@ var ListItem = (function () {
     }
     ListItem.prototype.bindToParent=function(parent){
         parent.appendChild(this.getElement());
+        return this;
+    }
+    ListItem.prototype.removeFromParent=function(){
+        this.getElement().parentNode.removeChild(this.getElement());
         return this;
     }
     ListItem.prototype.initFromPrototype=function(id){

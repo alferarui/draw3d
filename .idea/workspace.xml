@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="293fa727-5153-4fb4-b673-23031046a22b" name="Default" comment="draw3d project">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableNext.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableNextButton.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/UITableSelection.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/templates-images/empty.png" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/sass_stdlib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+    <list default="true" id="293fa727-5153-4fb4-b673-23031046a22b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/view/ListView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap.html" afterPath="$PROJECT_DIR$/bootstrap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Conditional.class.js" afterPath="$PROJECT_DIR$/js/Conditional.class.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/Queue.object.js" afterPath="$PROJECT_DIR$/js/Queue.object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/Button.class.js" afterPath="$PROJECT_DIR$/js/view/Button.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/ListItem.class.js" afterPath="$PROJECT_DIR$/js/view/ListItem.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/view/View.class.js" afterPath="$PROJECT_DIR$/js/view/View.class.js" />
     </list>
     <ignored path="draw3d.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +31,7 @@
       <file leaf-file-name="bootstrap.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bootstrap.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="89" column="31" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.37880632">
+            <state line="143" column="74" selection-start="6248" selection-end="6248" vertical-scroll-proportion="0.7772277">
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -42,10 +39,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VerticalLayout.class.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/view/VerticalLayout.class.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Queue.object.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/Queue.object.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="26" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
+            <state line="70" column="13" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -63,8 +69,19 @@
       <file leaf-file-name="View.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/view/View.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="9" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
+            <state line="12" column="42" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListView.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/view/ListView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="65" column="17" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#155#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +98,7 @@
       <file leaf-file-name="Button.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/view/Button.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="5" selection-start="4520" selection-end="4520" vertical-scroll-proportion="0.0">
+            <state line="53" column="55" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -90,7 +107,7 @@
       <file leaf-file-name="ListItem.class.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/view/ListItem.class.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="23" selection-start="2664" selection-end="2664" vertical-scroll-proportion="0.0">
+            <state line="78" column="9" selection-start="3316" selection-end="3316" vertical-scroll-proportion="-20.52">
               <folding />
             </state>
           </provider>
@@ -118,7 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/js/view/LinearLayout.class.js" />
         <option value="$PROJECT_DIR$/js/RayTrace/RayTracerWorker.js" />
         <option value="$PROJECT_DIR$/js/RayTrace/Surfaces.class.js" />
         <option value="$PROJECT_DIR$/js/RayTrace/Vector.class.js" />
@@ -127,11 +143,12 @@
         <option value="$PROJECT_DIR$/js/RayTrace/Plane.class.js" />
         <option value="$PROJECT_DIR$/js/RayTrace/Sphere.class.js" />
         <option value="$PROJECT_DIR$/js/RayTrace/Raytracer.class.js" />
+        <option value="$PROJECT_DIR$/js/Environment.class.js" />
+        <option value="$PROJECT_DIR$/js/Conditional.class.js" />
         <option value="$PROJECT_DIR$/js/view/Button.class.js" />
         <option value="$PROJECT_DIR$/js/view/View.class.js" />
-        <option value="$PROJECT_DIR$/js/Environment.class.js" />
         <option value="$PROJECT_DIR$/js/view/ListItem.class.js" />
-        <option value="$PROJECT_DIR$/js/Conditional.class.js" />
+        <option value="$PROJECT_DIR$/js/view/ListView.js" />
         <option value="$PROJECT_DIR$/js/Queue.object.js" />
         <option value="$PROJECT_DIR$/bootstrap.html" />
       </list>
@@ -150,7 +167,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -323,7 +340,11 @@
       <created>1361101041138</created>
       <updated>1361101041138</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="draw3d project">
+      <created>1361104934852</created>
+      <updated>1361104934852</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -404,18 +425,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/RayTrace/Color.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="51" selection-start="324" selection-end="324" vertical-scroll-proportion="0.21151586">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/RayTrace/Camera.class.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="58" selection-start="593" selection-end="593" vertical-scroll-proportion="0.0">
@@ -474,27 +483,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/view/Button.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="5" selection-start="4520" selection-end="4520" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/view/View.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="9" selection-start="1449" selection-end="1449" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/view/ListItem.class.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="23" selection-start="2664" selection-end="2664" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/Conditional.class.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="475" selection-end="475" vertical-scroll-proportion="0.0">
@@ -502,16 +490,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/view/VerticalLayout.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/view/Button.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="55" selection-start="2449" selection-end="2449" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/view/View.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="42" selection-start="376" selection-end="376" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/Queue.object.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="26" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.0">
+        <state line="70" column="13" selection-start="2352" selection-end="2352" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/view/ListView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="17" selection-start="2351" selection-end="2351" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/view/ListItem.class.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="9" selection-start="3316" selection-end="3316" vertical-scroll-proportion="-20.52">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootstrap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="31" selection-start="4058" selection-end="4058" vertical-scroll-proportion="0.37880632">
+        <state line="143" column="74" selection-start="6248" selection-end="6248" vertical-scroll-proportion="0.7772277">
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
