@@ -10,6 +10,7 @@
     <script type="text/javascript" src="js/view/View.class.js"></script>
     <script type="text/javascript" src="js/view/VerticalLayout.class.js"></script>
     <script type="text/javascript" src="js/view/Button.class.js"></script>
+    <script type="text/javascript" src="js/view/ListItem.class.js"></script>
 
     <script type="text/javascript" src="js/RayTrace/Vector.class.js"></script>
     <script type="text/javascript" src="js/RayTrace/Color.class.js"></script>
@@ -18,6 +19,18 @@
     <script type="text/javascript" src="js/RayTrace/Sphere.class.js"></script>
     <script type="text/javascript" src="js/RayTrace/Camera.class.js"></script>
     <script type="text/javascript" src="js/RayTrace/Raytracer.class.js"></script>
+
+    <script type="text/javascript" src="js/Conditional.class.js"></script>
+    <script type="text/javascript" src="js/Queue.object.js"></script>
+
+    <script type="text/javascript">
+        var buildProperty=function(context,name,setter,getter){
+            var f=function(value){if(value==undefined){return context[name];}else{context[name]=value;return context;}}
+            f.bind(context);
+            return f;
+        }
+
+    </script>
     <script type="text/javascript">
         function defaultScene() {
             return {
@@ -59,6 +72,21 @@
                 }
             }
             e.bindToParent(document.body);
+            li1=new ListItem('set Show Date',ListItem.decorations.arrow);
+            li1.setClickListener(function(owner,data,event){
+                While(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
+            })
+            li2=new ListItem('start showing date',ListItem.decorations.next);
+            li2.setClickListener(function(owner,data,event){
+                Queue.Resume();
+            })
+            li3=new ListItem('pause queue',ListItem.decorations.none);
+            li3.setClickListener(function(owner,data,event){
+                Queue.Pause();
+            })
+            li1.bindToParent(document.body);
+            li2.bindToParent(document.body);
+            li3.bindToParent(document.body);
         }
         
         function exec(rezx,rezy) {
@@ -75,6 +103,6 @@
         }
     </script>
 </head>
-<body onload="initInterface()">
+<body style="background:url(js/view/templates-images/backgroundStripes.png);" onload="initInterface()">
 </body>
 </html>

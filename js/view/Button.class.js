@@ -21,7 +21,6 @@ var Button = (function () {
                 st.id="style_Button";st.innerHTML=Button.template.css;
                 document.head.appendChild(st);
             }
-
             _view.addEventListener('click',View.makeEventListener(_View,title,_click_eventListener));
 
             _view.children[1].addEventListener('mouseover',View.makeEventListener(null, null,function(){

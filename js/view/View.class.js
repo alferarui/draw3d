@@ -6,9 +6,9 @@
  * To change this template use File | Settings | File Templates.
  */
 var View = (function () {
-    function View(data,itemAtIndex) {
+    function View(data,itemAtIndex,tag) {
         var _View=this;
-        var _element=document.createElement("div");
+        var _element=document.createElement(tag||"div");
         var _data=data||[];
         this.setElement=function(element){
             _element=element;
