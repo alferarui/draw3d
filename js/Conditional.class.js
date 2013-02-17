@@ -6,15 +6,16 @@
  * To change this template use File | Settings | File Templates.
  */
 var Conditional=(function(){
-    function Conditional(_$if,_$then,_$else,repeatType){
+    function Conditional(_$if,_$then,repeatType){
         var _Conditional=this;
         this.$if=_$if||function(){return false;}
-        this.$then=_$then||function(){};
-        this.$else=_$else;
-        this.repeat=repeatType||Conditional.REPEAT_WHILE;
+        this.$then=function(){
+            _$then();
+            this.remove=(repeatType==Conditional.EXECUTE_ONCE)
+        };
+        this.remove=false;
     }
-    Conditional.prototype.REPEAT_WHILE=-1;
-    Conditional.prototype.REPEAT_WHEN=-2;
-    Conditional.prototype.DO_ONCE=-3;
+    Conditional.EXECUTE_ONCE=-1;
+    Conditional.EXECUTE_ALWAYS=-2;
     return Conditional;
 })();

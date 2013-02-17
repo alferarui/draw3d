@@ -74,14 +74,18 @@
             e.bindToParent(document.body);
             li1=new ListItem('set Show Date',ListItem.decorations.arrow);
             li1.setClickListener(function(owner,data,event){
-                While(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
+                //While(function(){return true}).Do(function(owner,data,event){;li1.setText(Date().toString())});
+                Do(function(owner,data,event){;li1.setText(Date().toString())});
+                li1.setDetail("listener registered");
             })
             li2=new ListItem('start showing date',ListItem.decorations.next);
             li2.setClickListener(function(owner,data,event){
+                li1.setDetail("queue resumed");
                 Queue.Resume();
             })
             li3=new ListItem('pause queue',ListItem.decorations.none);
             li3.setClickListener(function(owner,data,event){
+                li1.setDetail("queue paused");
                 Queue.Pause();
             })
             li1.bindToParent(document.body);
